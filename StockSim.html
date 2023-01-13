@@ -1,0 +1,52 @@
+<HTML>
+    <head>
+        <title>stock simulator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+    <script type="text/javascript" src="stocksim.js"></script>
+    <script type="text/javascript" src="StockBuyFunctions.js"></script>
+    <script type="text/javascript" src="SaveFunction.js"></script>
+    <link rel="stylesheet" href="stocksim.css">
+    </head>
+
+    <body>
+        <header>stock simulator</header>
+        <marquee scrollamount="20">Testing</marquee>
+
+        <div class="cash">
+            <h3>cash: <span id="Cash"></span></h3>
+        </div>
+
+        <div class="stockbutton">
+            <h3>AMZ:</h3>
+            <button onclick="buyAMZ()">Buy [1]</button><br>
+
+            <h3>AAPL:</h3>
+            <button onclick="buyAAPL()">Buy [1]</button><br>
+            
+            <h3>TSLA:</h3>
+            <button onclick="buyTSLA()">Buy [1]</button>
+        </div>
+
+
+        <div class="stocktitles">
+            <h3>your stocks</h3>
+        </div>
+
+        <div class="yourstocks">
+            <h3>AMZ: <span id="AMZqty">0</span></h3><br>
+            <h3>AAPL: <span id="AAPLqty">0</span></h3><br>
+            <h3>TSLA: <span id="TSLAqty">0</span></h3>
+        </div>
+
+        <div class="stockprices2">
+            <h3>stock prices</h3>
+        </div>
+
+        <div class="stockprices">
+            <h3>AMZ: <span id="AMZprice"></span></h3><br>
+            <h3>AAPL: <span id="AAPLprice"></span></h3><br>
+            <h3>TSLA: <span id="TSLAprice"></span></h3>
+        </div>
+
+    </body>
