@@ -3,10 +3,10 @@ var Cash = 1000;
 var AMZprice = 100;
 var AMZqty = 0;
 
-var AAPLprice = 130;
+var AAPLprice = 500;
 var AAPLqty = 0;
 
-var TSLAprice = 120;
+var TSLAprice = 1500;
 var TSLAqty = 0;
 
 var RandomNumber = 0.5;
@@ -53,10 +53,10 @@ setInterval(function() {
     TSLAprice = 144;
   }
 
-  document.getElementById("RandomNumber2").innerHTML = RandomNumber2;
-  document.getElementById("AAPLpriceChange").innerHTML = AAPLpriceChange;
   document.getElementById("RandomNumber").innerHTML = RandomNumber;
   document.getElementById("AMZpriceChange").innerHTML = AMZpriceChange;
+  document.getElementById("RandomNumber2").innerHTML = RandomNumber2;
+  document.getElementById("AAPLpriceChange").innerHTML = AAPLpriceChange;
   document.getElementById("RandomNumber3").innerHTML = RandomNumber3;
   document.getElementById("TSLApriceChange").innerHTML = TSLApriceChange;
-  }, 1);
+  }, 100);
