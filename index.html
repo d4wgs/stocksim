@@ -1,52 +1,74 @@
-<HTML>
-    <head>
-        <title>stock simulator</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>StockSim</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
     <script type="text/javascript" src="stocksim.js"></script>
     <script type="text/javascript" src="StockBuyFunctions.js"></script>
     <script type="text/javascript" src="SaveFunction.js"></script>
     <link rel="stylesheet" href="stocksim.css">
-    </head>
+</head>
 
-    <body>
-        <header>stock simulator</header>
-        <marquee scrollamount="20">Testing</marquee>
+<body>
+    <header>StockSim</header>
+    <marquee scrollamount="20">Testing</marquee>
 
-        <div class="cash">
-            <h3>cash: <span id="Cash"></span></h3>
-        </div>
+    <div class="boxtitles">
+        <h3>cash: <span id="Cash"></span></h3>
+    </div>
 
-        <div class="stockbutton">
+    <div class="buysellbox">
+        <div class="flexbox">
             <h3>AMZ:</h3>
-            <button onclick="buyAMZ()">Buy [1]</button><br>
-
+            <span>
+                <div>
+                    <button onclick="buyAMZ()">Buy [1]</button>
+                    <button onclick="sellAMZ()">Sell [1]</button>
+                </div>
+            </span>
+        </div>
+<br>
+            <div class="flexbox">
             <h3>AAPL:</h3>
-            <button onclick="buyAAPL()">Buy [1]</button><br>
-            
+            <span>
+                <div>
+                    <button onclick="buyAAPL()">Buy [1]</button>
+                    <button onclick="sellAAPL()">Sell [1]</button>
+                </div>
+            </span>
+        </div>
+<br>
+            <div class="flexbox">
             <h3>TSLA:</h3>
-            <button onclick="buyTSLA()">Buy [1]</button>
+            <span>
+                <div>
+                    <button onclick="buyTSLA()">Buy [1]</button>
+                    <button onclick="sellTSLA()">Sell [1]</button>
+                </div>
+            </span>
         </div>
+    </div>
 
 
-        <div class="stocktitles">
+    <div class="boxtitles">
             <h3>your stocks</h3>
-        </div>
+    </div>
 
-        <div class="yourstocks">
-            <h3>AMZ: <span id="AMZqty">0</span></h3><br>
-            <h3>AAPL: <span id="AAPLqty">0</span></h3><br>
-            <h3>TSLA: <span id="TSLAqty">0</span></h3>
-        </div>
+    <div class="yourstocks">
+        <h3>AMZ: <span id="AMZqty">0</span></h3><br>
+        <h3>AAPL: <span id="AAPLqty">0</span></h3><br>
+        <h3>TSLA: <span id="TSLAqty">0</span></h3>
+    </div>
 
-        <div class="stockprices2">
+    <div class="boxtitles">
             <h3>stock prices</h3>
-        </div>
+    </div>
 
-        <div class="stockprices">
-            <h3>AMZ: <span id="AMZprice"></span></h3><br>
-            <h3>AAPL: <span id="AAPLprice"></span></h3><br>
-            <h3>TSLA: <span id="TSLAprice"></span></h3>
-        </div>
-
+    <div class="stockprices">
+        <h3>AMZ: <span id="AMZprice"></span></h3><br>
+        <h3>AAPL: <span id="AAPLprice"></span></h3><br>
+        <h3>TSLA: <span id="TSLAprice"></span></h3>
+    </div>
+   
     </body>
