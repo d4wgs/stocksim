@@ -20,11 +20,11 @@ document.addEventListener("keydown", function(event) {
 }, false);
 
 function loadGame() {
-    var savedGame = JSON.parse(localStorage.getItem("gameSave"));
-    if (typeof savedGame.AMZprice !== undefined) AMZprice = savedGame.AMZprice;
-    if (typeof savedGame.AMZqty !== undefined) AMZqty = savedGame.AMZqty;
-    if (typeof savedGame.Cash !== undefined) Cash = savedGame.Cash;
-  }
+  var savedGame = JSON.parse(localStorage.getItem("gameSave"));
+  if (savedGame && savedGame.AMZprice !== undefined && savedGame.AMZprice !== null) AMZprice = savedGame.AMZprice;
+  if (savedGame && savedGame.AMZqty !== undefined && savedGame.AMZqty !== null) AMZqty = savedGame.AMZqty;
+  if (savedGame && savedGame.Cash !== undefined && savedGame.Cash !== null) Cash = savedGame.Cash;
+}
   
   function saveGame() {
     var gameSave = {
@@ -35,13 +35,15 @@ function loadGame() {
     localStorage.setItem("gameSave", JSON.stringify(gameSave));
   }
   
-  window.onload = function() {
+  window.onload = function () {
     loadGame();
-    document.getElementById("AMZprice").innerHTML = AMZprice;
-    document.getElementById("AMZqty").innerHTML = AMZqty;
-    document.getElementById("Cash").innerHTML = Cash;
-    window.onload = function begin001() {
-      message001.innerHTML = a001 + " + " + a002 + " =";
-      message002.innerHTML = "<input type=text id=input001 /> <button onclick=check001() class=mathcheck>Check</button>";
-  }
+    var amzPriceElement = document.getElementById("AMZprice");
+    var amzQtyElement = document.getElementById("AMZqty");
+    var cashElement = document.getElementById("Cash");
+
+    if (amzPriceElement && amzQtyElement && cashElement) {
+        amzPriceElement.innerHTML = AMZprice;
+        amzQtyElement.innerHTML = AMZqty;
+        cashElement.innerHTML = Cash;
+    }
   };
