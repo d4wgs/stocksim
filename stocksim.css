@@ -1,75 +1,67 @@
 body {
     background-color: #1F2933;
+    margin: 0;
+    font-size: 16px; /* Set a base font size for em values*/
 }
 
 header {
     text-align: center;
-    font-size: 3vw;
+    font-size: 4.8em;
     color: #CBD2D9;
 }
 
-.stockbutton {
-    position: absolute;
-    left: 0.5vw;
-    top: 8vw;
-    width: 13vw;
-    height: 10vw;
-    border: 0.1vw dotted red;
+h3 {
+    display: inline-block;
+    margin: 0vw;
+    line-height: 3;
+    color: #CBD2D9;
+    font-family: 'Inconsolata';
 }
 
-.cash {
-    position: absolute;
-    left: 3vw;
-    top: 5.5vw;
-    width: 13vw;
-    height: 2vw;
+* {
+    box-sizing: border-box;
+}
+
+.buysellbox {
+    width: 100%; /* Occupy full width on smaller screens */
+    max-width: 300px; /* Limit maximum width for larger screens */
+    margin: auto; /* Center the element */
+    padding: 0.5em;
+    border: 0.1vw dotted red;
     text-align: left;
 }
 
-.stocktitles {
-    position: absolute;
-    left: 14.2vw;
-    text-align: center;
-    top: 5.5vw;
-    font-size: 1vw;
-    width: 13vw;
-}
-
 .yourstocks {
-    position: absolute;
-    left: 14.5vw;
-    top: 8vw;
-    width: 13vw;
-    height: 10vw;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    padding: 0.5em;
     border: 0.1vw dotted red;
 }
 
 .stockprices {
-    position: absolute;
-    left: 0.5vw;
-    height: 10vw;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 1em;
     border: 0.1vw dotted red;
-    width: 13vw;
-    top: 21vw;
+    margin-top: 1em;
 }
 
-.stockprices2 {
-    position: absolute;
-    left: 0.15vw;
-    height: 10vw;
-    width: 13vw;
-    top: 18.5vw;
+.boxtitles {
     text-align: center;
 }
 
+.flexbox {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
 button {
-    float: right;
-    position: relative;
-    right: 0.5vw;
-    margin-top: 1vw;
     font-family: 'Inconsolata';
     background-color: #f44336;
-    border: 2px solid #f44336;
+    border: 0.2vw solid #f44336;
     transition-duration: 0.4s;
     color: #CBD2D9;
     font-size: 0.75vw;
@@ -80,22 +72,13 @@ button:hover {
     color: white;
 }
 
-h3 {
-    display: inline-block;
-    margin: 0vw;
-    position: relative;
-    left: 0.5vw;
-    line-height: 3vw;
-    color: #CBD2D9;
-    font-family: 'Inconsolata';
-}
-
 marquee {
-    font-size: 1vw;
+    font-size: 1em;
     color: #CBD2D9;
     font-family: 'Inconsolata';
     border: 0.2vw solid #323F4B;
-    position: absolute;
-    top: 4vw;
-    width: 98.7%;
+    width: 100%;
+    padding: 0.35em;
+    margin-top: 0em;
+    overflow: hidden; /* Prevent marquee content from overflowing */
 }
